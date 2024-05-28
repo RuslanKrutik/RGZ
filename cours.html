@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курс валют - Банк Новый Век</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon-16x16.png">
+    <link rel="icon" href="favicon-32x32.png">
+    <script src="currency.js" defer></script>
+    <style>
+        .centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        }
+
+        h1 {
+            margin: 10px 0;
+        }
+
+        h2 {
+            margin: 5px 0;
+        }
+        
+        .block {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .currency-converter {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .converter {
+            flex: 1 1 45%;
+            margin: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: rgba(0, 0, 255, 0.8);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        #rate {
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="centered">
+            <img src="free-icon-flower.png" alt="Bank Logo">
+            <h1>БАНК НОВЫЙ ВЕК</h1>
+            <h2>Курс валют</h2>
+        </div>
+    </header>
+    <main>
+        <section class="block">
+            <h2>Калькулятор валют</h2>
+            <div class="currency-converter">
+                <div class="converter">
+                    <label for="rubles">Рубли (RUB):</label>
+                    <input type="number" id="rubles" placeholder="Введите сумму в рублях">
+                    <button onclick="convertToMDL()">Конвертировать в Молдавский лей (MDL)</button>
+                </div>
+                <div class="converter">
+                    <label for="mdl">Молдавский лей (MDL):</label>
+                    <input type="number" id="mdl" placeholder="Введите сумму в лей">
+                    <button onclick="convertToRUB()">Конвертировать в рубли (RUB)</button>
+                </div>
+            </div>
+            <p id="rate">Текущий курс: Загружается...</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="menu-panel" id="menuPanel">
+            <a href="MAINmenu.html">ГЛАВНАЯ</a>
+            <a href="infiormBank.html">О КОМПАНИИ</a>
+            <a href="news.html">НОВОСТИ</a>
+            <a href="cours.html">КУРС ВАЛЮТ</a>
+            <a href="map.html">КОНТАКТНЫЕ ДАННЫЕ</a>
+            <a href="video.html">ВИДЕО</a>
+        </div>
+        <div>БАНК НОВЫЙ ВЕК</div>
+        <div style="text-align: right;">Крутиков Руслан. 2024</div>
+    </footer>
+</body>
+</html>
